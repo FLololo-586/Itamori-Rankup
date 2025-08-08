@@ -23,6 +23,9 @@ module.exports = {
                 .setDescription('Reason (required when adding)')
                 .setRequired(false)),
     async execute(interaction) {
+        // Defer the reply first
+        await interaction.deferReply({ ephemeral: false });
+        
         const action = interaction.options.getString('action');
         const memberOption = interaction.options.getMember('member');
         if (!memberOption) {
@@ -41,9 +44,8 @@ module.exports = {
         } catch (error) {
             logger.error('Error in blacklist command:', error);
             await interaction.editReply({ 
-                content: '❌ Une erreur est survenue lors du traitement de votre demande.',
-                ephemeral: true 
-            });
+                content: '❌ Une erreur est survenue lors du traitement de votre demande.'
+            }).catch(console.error);
         }
     },
     async handleAdd(interaction, targetUser, reason) {
@@ -91,7 +93,7 @@ module.exports = {
             }
             await interaction.editReply({ 
                 content: `✅ ${targetUser.tag} a été ajouté(e) à la blacklist du classement.`
-            });
+            }).catch(console.error);
         } catch (error) {
             logger.error('Error in handleAdd:', error);
             await interaction.reply({
