@@ -137,6 +137,63 @@ class DatabaseManager {
         next();
     }
     
+    /**
+     * Add a user to the blacklist
+     * @param {string} userId - The ID of the user to blacklist
+     * @param {string} adminId - The ID of the admin who blacklisted the user
+     * @param {string} reason - The reason for blacklisting
+     * @returns {Promise<Object>} The result of the operation
+     */
+    /**
+     * Get a blacklisted user by ID
+     * @param {string} userId - The ID of the user to check
+     * @returns {Promise<Object|null>} The blacklist entry or null if not found
+     */
+    getBlacklistedUser(userId) {
+        return new Promise((resolve, reject) => {
+            this.db.get(
+                'SELECT * FROM blacklist WHERE userId = ?',
+                [userId],
+                (err, row) => {
+                    if (err) {
+                        logger.error(`Error getting blacklisted user ${userId}:`, err);
+                        return resolve(null);
+                    }
+                    resolve(row || null);
+                }
+            );
+        });
+    }
+
+    /**
+     * Add a user to the blacklist
+     * @param {string} userId - The ID of the user to blacklist
+     * @param {string} adminId - The ID of the admin who blacklisted the user
+     * @param {string} reason - The reason for blacklisting
+     * @returns {Promise<Object>} The result of the operation
+     */
+    addToBlacklist(userId, adminId, reason) {
+        const now = Math.floor(Date.now() / 1000);
+        return new Promise((resolve, reject) => {
+            this.db.run(
+                `INSERT INTO blacklist (userId, reason, adminId, createdAt, updatedAt)
+                 VALUES (?, ?, ?, ?, ?)
+                 ON CONFLICT(userId) DO UPDATE SET
+                    reason = excluded.reason,
+                    adminId = excluded.adminId,
+                    updatedAt = excluded.updatedAt`,
+                [userId, reason, adminId, now, now],
+                function(err) {
+                    if (err) {
+                        logger.error(`Error adding user ${userId} to blacklist:`, err);
+                        return reject(err);
+                    }
+                    resolve({ changes: this.changes });
+                }
+            );
+        });
+    }
+
     // Run database migrations to handle schema changes
     async runMigrations() {
         return new Promise((resolve, reject) => {
