@@ -1,0 +1,1005 @@
+2025-08-07 21:03:22 [[31merror[39m]: TypeError: this.db.transaction is not a function
+    at DatabaseManager.initializeDatabase (C:\Users\flori\Desktop\Itamori-Rankup\database.js:31:37)
+    at new DatabaseManager (C:\Users\flori\Desktop\Itamori-Rankup\database.js:21:18)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:321:19)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+2025-08-07 21:03:22 [[31merror[39m]: TypeError: this.db.transaction is not a function
+    at DatabaseManager.initializeDatabase (C:\Users\flori\Desktop\Itamori-Rankup\database.js:31:37)
+    at new DatabaseManager (C:\Users\flori\Desktop\Itamori-Rankup\database.js:21:18)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:321:19)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+2025-08-07 21:06:12 [[31merror[39m]: TypeError: this.db.transaction is not a function
+    at DatabaseManager.initializeDatabase (C:\Users\flori\Desktop\Itamori-Rankup\database.js:31:37)
+    at new DatabaseManager (C:\Users\flori\Desktop\Itamori-Rankup\database.js:21:18)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:321:19)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+2025-08-07 21:06:12 [[31merror[39m]: TypeError: this.db.transaction is not a function
+    at DatabaseManager.initializeDatabase (C:\Users\flori\Desktop\Itamori-Rankup\database.js:31:37)
+    at new DatabaseManager (C:\Users\flori\Desktop\Itamori-Rankup\database.js:21:18)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:321:19)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+2025-08-07 21:06:32 [[31merror[39m]: TypeError: this.db.transaction is not a function
+    at DatabaseManager.initializeDatabase (C:\Users\flori\Desktop\Itamori-Rankup\database.js:31:37)
+    at new DatabaseManager (C:\Users\flori\Desktop\Itamori-Rankup\database.js:21:18)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:321:19)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+2025-08-07 21:06:32 [[31merror[39m]: TypeError: this.db.transaction is not a function
+    at DatabaseManager.initializeDatabase (C:\Users\flori\Desktop\Itamori-Rankup\database.js:31:37)
+    at new DatabaseManager (C:\Users\flori\Desktop\Itamori-Rankup\database.js:21:18)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:321:19)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+2025-08-07 21:20:27 [[31merror[39m]: Error: SQLITE_ERROR: near "createdAt": syntax error
+--> in Database#run('CREATE TABLE IF NOT EXISTS message_history (\n' +
+  '                            id INTEGER PRIMARY KEY AUTOINCREMENT,\n' +
+  '                            userId TEXT,\n' +
+  '                            timestamp INTEGER,\n' +
+  '                            FOREIGN KEY (userId) REFERENCES users(userId) ON DELETE CASCADE,\n' +
+  "                            createdAt INTEGER DEFAULT (strftime('%s', 'now'))\n" +
+  '                        )', [Function (anonymous)])
+    at executeStatements (C:\Users\flori\Desktop\Itamori-Rankup\database.js:94:33)
+    at Statement.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:99:29)
+2025-08-07 21:20:27 [[31merror[39m]: Error: SQLITE_ERROR: near "createdAt": syntax error
+--> in Database#run('CREATE TABLE IF NOT EXISTS message_history (\n' +
+  '                            id INTEGER PRIMARY KEY AUTOINCREMENT,\n' +
+  '                            userId TEXT,\n' +
+  '                            timestamp INTEGER,\n' +
+  '                            FOREIGN KEY (userId) REFERENCES users(userId) ON DELETE CASCADE,\n' +
+  "                            createdAt INTEGER DEFAULT (strftime('%s', 'now'))\n" +
+  '                        )', [Function (anonymous)])
+    at executeStatements (C:\Users\flori\Desktop\Itamori-Rankup\database.js:94:33)
+    at Statement.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:99:29)
+2025-08-07 21:20:27 [[31merror[39m]: 	[31mUnhandled Rejection at:[39m
+2025-08-07 23:11:13 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\messageCreate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\messageCreate.js:3:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:11:13 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:14:38 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\messageCreate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\messageCreate.js:3:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:14:38 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:15:39 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\messageCreate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\messageCreate.js:3:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:15:39 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:16:47 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\messageCreate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\messageCreate.js:3:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:16:47 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:19:52 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:20:05 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754601605,
+  1754601605465,
+  1754601605465,
+  1754601605465,
+  1754601605465,
+  1754601605465
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:204:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:202:16)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:231:37
+2025-08-07 23:20:05 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754601605,
+  1754601605465,
+  1754601605465,
+  1754601605465,
+  1754601605465,
+  1754601605465
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:204:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:202:16)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:231:37
+2025-08-07 23:20:05 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754601605,
+  1754601605465,
+  1754601605465,
+  1754601605465,
+  1754601605465,
+  1754601605465
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:204:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:202:16)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:231:37
+2025-08-07 23:21:52 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:22:48 [[31merror[39m]: TypeError: blacklist.map is not a function
+    at Object.handleList (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:145:34)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:49:32)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:31)
+    at RankUpClient.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\index.js:103:64)
+    at RankUpClient.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:351:31)
+    at WebSocketManager.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:235:12)
+    at WebSocketManager.emit (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@vladfrangu\async_event_emitter\dist\index.cjs:287:31)
+2025-08-07 23:22:48 [[31merror[39m]: Error: SQLITE_ERROR: no such column: u.username
+--> in Database#all('SELECT b.*, u.username, u.discriminator \n' +
+  '                 FROM blacklist b\n' +
+  '                 LEFT JOIN users u ON b.userId = u.userId\n' +
+  '                 ORDER BY b.createdAt DESC', [], [Function (anonymous)])
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:167:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.getBlacklist (C:\Users\flori\Desktop\Itamori-Rankup\database.js:166:16)
+    at Object.handleList (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:131:37)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:49:32)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:31)
+    at RankUpClient.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\index.js:103:64)
+    at RankUpClient.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+2025-08-07 23:27:44 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:33:56 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:34:25 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:35:21 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:37:53 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:43:03 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:49:04 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:51:52 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-07 23:59:06 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-08 00:01:19 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-08 00:04:25 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-08 00:05:21 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-08 00:08:25 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-08 00:10:51 [[31merror[39m]: Error: Cannot find module '../../utils/logger'
+Require stack:
+- C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js
+- C:\Users\flori\Desktop\Itamori-Rankup\index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:2:16)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+2025-08-08 00:14:40 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:14:40 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:22:00 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.deferReply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:129:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\rankup\rank.js:85:13)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 00:22:00 [[31merror[39m]: DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:30:21)
+2025-08-08 00:22:00 [[31merror[39m]: DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:30:21)
+2025-08-08 00:22:18 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.deferReply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:129:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\rankup\rank.js:85:13)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 00:22:19 [[31merror[39m]: DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:30:21)
+2025-08-08 00:22:19 [[31merror[39m]: DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:30:21)
+2025-08-08 00:25:23 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:25:23 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:28:54 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:28:54 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:28:54 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:28:54 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:36:39 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606199177,
+  1754606199177,
+  1754606199177,
+  1754606199177,
+  1754606199177
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:36:39 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606199177,
+  1754606199177,
+  1754606199177,
+  1754606199177,
+  1754606199177
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:37:16 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606236345,
+  1754606236345,
+  1754606236345,
+  1754606236345,
+  1754606236345
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:37:16 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606236345,
+  1754606236345,
+  1754606236345,
+  1754606236345,
+  1754606236345
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:37:16 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606236366,
+  1754606236366,
+  1754606236366,
+  1754606236366,
+  1754606236366
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:37:16 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606236366,
+  1754606236366,
+  1754606236366,
+  1754606236366,
+  1754606236366
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:37:21 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606241383,
+  1754606241383,
+  1754606241383,
+  1754606241383,
+  1754606241383
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:37:21 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606241383,
+  1754606241383,
+  1754606241383,
+  1754606241383,
+  1754606241383
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:37:31 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:37:31 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 00:40:01 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606401701,
+  1754606401701,
+  1754606401701,
+  1754606401701,
+  1754606401701
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 00:40:01 [[31merror[39m]: Error: SQLITE_RANGE: column index out of range
+--> in Statement#get([
+  '1233744354607108099',
+  1754573708852,
+  1754606401701,
+  1754606401701,
+  1754606401701,
+  1754606401701,
+  1754606401701
+], [Function: replacement])
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:82:19)
+    at Database.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\sqlite3\lib\sqlite3.js:20:19)
+    at C:\Users\flori\Desktop\Itamori-Rankup\database.js:244:21
+    at new Promise (<anonymous>)
+    at DatabaseManager.createUser (C:\Users\flori\Desktop\Itamori-Rankup\database.js:242:16)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\voiceStateUpdate.js:43:40)
+2025-08-08 02:07:03 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:07:03 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:08:01 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:08:01 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:11:41 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:11:41 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:14:09 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:14:09 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:28:12 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.deferReply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:129:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\rankup\rank.js:85:13)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 02:28:12 [[31merror[39m]: DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 02:28:12 [[31merror[39m]: DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 02:29:44 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:29:44 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:29:44 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:29:44 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:40:49 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:40:49 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:47:24 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:47:24 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:51:01 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 02:51:01 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 03:12:46 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 03:12:46 [[31merror[39m]: Error: SQLITE_ERROR: no such column: updatedAt
+2025-08-08 12:58:24 [[31merror[39m]: C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:203
+function formatTime(ms) {
+^
+
+SyntaxError: Identifier 'formatTime' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at RankUpClient.loadEvents (C:\Users\flori\Desktop\Itamori-Rankup\index.js:93:35)
+2025-08-08 12:59:07 [[31merror[39m]: C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:203
+function formatTime(ms) {
+^
+
+SyntaxError: Identifier 'formatTime' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+    at Module._compile (node:internal/modules/cjs/loader:1704:20)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at RankUpClient.loadEvents (C:\Users\flori\Desktop\Itamori-Rankup\index.js:93:35)
+2025-08-08 13:58:50 [[31merror[39m]: TypeError: client.db.updateUser is not a function
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\stat-add.js:82:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 14:04:14 [[31merror[39m]: TypeError: statName.capitalize is not a function
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\stat-add.js:104:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 14:04:25 [[31merror[39m]: ReferenceError: messagesProgress is not defined
+    at calculateRankProgress (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\rankup\rank.js:86:31)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\rankup\rank.js:137:34)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 14:26:00 [[31merror[39m]: TypeError: blacklist.map is not a function
+    at Object.handleList (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:145:34)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:49:32)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:31)
+    at RankUpClient.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\index.js:103:64)
+    at RankUpClient.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:351:31)
+    at WebSocketManager.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:235:12)
+    at WebSocketManager.emit (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@vladfrangu\async_event_emitter\dist\index.cjs:287:31)
+2025-08-08 14:26:00 [[31merror[39m]: Error: SQLITE_ERROR: no such column: u.username
+2025-08-08 14:44:53 [[31merror[39m]: TypeError: blacklist.map is not a function
+    at Object.handleList (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:145:34)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:49:32)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:31)
+    at RankUpClient.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\index.js:103:64)
+    at RankUpClient.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:351:31)
+    at WebSocketManager.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:235:12)
+    at WebSocketManager.emit (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@vladfrangu\async_event_emitter\dist\index.cjs:287:31)
+2025-08-08 14:44:53 [[31merror[39m]: Error: SQLITE_ERROR: no such column: u.username
+2025-08-08 14:49:42 [[31merror[39m]: TypeError: blacklist.map is not a function
+    at Object.handleList (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:145:34)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:49:32)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:31)
+    at RankUpClient.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\index.js:103:64)
+    at RankUpClient.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:351:31)
+    at WebSocketManager.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:235:12)
+    at WebSocketManager.emit (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@vladfrangu\async_event_emitter\dist\index.cjs:287:31)
+2025-08-08 14:50:05 [[31merror[39m]: TypeError: blacklist.map is not a function
+    at Object.handleList (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:145:34)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:49:32)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:31)
+    at RankUpClient.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\index.js:103:64)
+    at RankUpClient.emit (node:events:518:28)
+    at InteractionCreateAction.handle (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\actions\InteractionCreate.js:101:12)
+    at module.exports [as INTERACTION_CREATE] (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\handlers\INTERACTION_CREATE.js:4:36)
+    at WebSocketManager.handlePacket (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:351:31)
+    at WebSocketManager.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\client\websocket\WebSocketManager.js:235:12)
+    at WebSocketManager.emit (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@vladfrangu\async_event_emitter\dist\index.cjs:287:31)
+2025-08-08 14:57:15 [[31merror[39m]: Error: Invalid string format
+    at Object.run (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@sapphire\shapeshift\dist\cjs\index.cjs:2475:64)
+    at C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@sapphire\shapeshift\dist\cjs\index.cjs:972:67
+    at Array.reduce (<anonymous>)
+    at _StringValidator.parse (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@sapphire\shapeshift\dist\cjs\index.cjs:972:29)
+    at validateName (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\builders\dist\index.js:2421:17)
+    at MixedClass.setName (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\builders\dist\index.js:2523:5)
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:7:10)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+2025-08-08 15:09:28 [[31merror[39m]: Error: SQLITE_CONSTRAINT: FOREIGN KEY constraint failed
+2025-08-08 15:09:28 [[31merror[39m]: Error: SQLITE_CONSTRAINT: FOREIGN KEY constraint failed
+2025-08-08 15:14:02 [[31merror[39m]: Error: SQLITE_CONSTRAINT: FOREIGN KEY constraint failed
+2025-08-08 15:14:02 [[31merror[39m]: Error: SQLITE_CONSTRAINT: FOREIGN KEY constraint failed
+2025-08-08 16:27:01 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\list-blacklist.js:88:13)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 16:27:03 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 16:27:03 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 16:27:54 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.handleRemove (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:144:13)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:36:17)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 16:27:57 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.handleRemove (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:150:13)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:36:17)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 16:28:12 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\blrank.js:36:17)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:18:17)
+2025-08-08 16:28:15 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 16:28:15 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 16:38:10 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 16:38:10 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 16:51:22 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 16:51:22 [[31merror[39m]: DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:748:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:852:23)
+    at async _REST.request (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\@discordjs\rest\dist\index.js:1293:22)
+    at async ChatInputCommandInteraction.reply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:200:22)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:32:21)
+2025-08-08 17:03:49 [[31merror[39m]: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ChatInputCommandInteraction.deferReply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:100:46)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\derank.js:17:31)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:41:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-08 17:10:47 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'Ephemeral')
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:7:38)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at RankUpClient.loadEvents (C:\Users\flori\Desktop\Itamori-Rankup\index.js:93:35)
+2025-08-08 17:15:43 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'Ephemeral')
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:7:38)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at RankUpClient.loadEvents (C:\Users\flori\Desktop\Itamori-Rankup\index.js:93:35)
+2025-08-08 17:16:11 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'Ephemeral')
+    at Object.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:7:38)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at RankUpClient.loadEvents (C:\Users\flori\Desktop\Itamori-Rankup\index.js:93:35)
+2025-08-08 17:43:31 [[31merror[39m]: Error [InteractionAlreadyReplied]: The reply to this interaction has already been sent or deferred.
+    at ChatInputCommandInteraction.deferReply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:100:46)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\rankup\rank.js:120:31)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:53:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-08-08 17:57:14 [[31merror[39m]: Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (C:\Users\flori\Desktop\Itamori-Rankup\node_modules\discord.js\src\structures\interfaces\InteractionResponses.js:253:48)
+    at Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\commands\admin\stat-add.js:105:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (C:\Users\flori\Desktop\Itamori-Rankup\src\events\interactionCreate.js:56:21)
+2025-08-08 18:11:59 [[31merror[39m]: Error: SQLITE_ERROR: table message_history has no column named messageCount
+2025-08-08 18:11:59 [[31merror[39m]: Error: SQLITE_ERROR: table message_history has no column named messageCount
+2025-08-08 18:12:24 [[31merror[39m]: Error: SQLITE_ERROR: table message_history has no column named messageCount
+2025-08-08 18:12:24 [[31merror[39m]: Error: SQLITE_ERROR: table message_history has no column named messageCount
+2025-08-08 22:06:21 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'run')
+    at Statement.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:322:33)
+2025-08-08 22:06:21 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'run')
+    at Statement.<anonymous> (C:\Users\flori\Desktop\Itamori-Rankup\database.js:322:33)
+2025-08-08 22:08:34 [[31merror[39m]: ReferenceError: prochainDimanche is not defined
+    at Scheduler.scheduleBiWeeklyReset (C:\Users\flori\Desktop\Itamori-Rankup\src\utils\scheduler.js:46:72)
+    at main (C:\Users\flori\Desktop\Itamori-Rankup\index.js:222:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

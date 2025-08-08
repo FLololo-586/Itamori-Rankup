@@ -1,0 +1,36 @@
+{
+  "name": "itamori-rankup",
+  "version": "1.0.0",
+  "description": "A Discord bot for automated rank progression based on server activity",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "node deploy-commands.js",
+    "lint": "eslint . --ext .js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "rank",
+    "leveling",
+    "voice",
+    "activity"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.9.0"
+  }
+}

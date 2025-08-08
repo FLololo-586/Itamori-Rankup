@@ -1,0 +1,181 @@
+{
+  "token": "",
+  "clientId": "1402742905042505929",
+  "guildId": "1387173933823819917",
+  "ownerId": "1233744354607108099",
+  "requiredRoleId": "1400266141745807463",
+  "permissions": [
+    {
+      "id": 1,
+      "name": "Perm I",
+      "roleId": "1400266131327156254"
+    },
+    {
+      "id": 2,
+      "name": "Perm II",
+      "roleId": "1400266112662372465"
+    },
+    {
+      "id": 3,
+      "name": "Perm III",
+      "roleId": "1400266089379926087"
+    },
+    {
+      "id": 4,
+      "name": "Perm IV",
+      "roleId": "1400266070585245949"
+    },
+    {
+      "id": 5,
+      "name": "Perm V",
+      "roleId": "1400266051748630590"
+    }
+  ],
+  "ranks": [
+  
+    {
+      "id": 1,
+      "name": "🔎・Staff Test",
+      "requiredMessages": 0,
+      "requiredVoiceHours": 0,
+      "permissionId": 1,
+      "roleId": "1400266141745807463",
+      "isOrCondition": true
+    },
+    {
+      "id": 2,
+      "name": "💎・Modérateur",
+      "requiredMessages": 0,
+      "requiredVoiceHours": 1,
+      "permissionId": 1,
+      "roleId": "1400266138197295144",
+      "isOrCondition": true
+    },
+    {
+      "id": 3,
+      "name": "👔・Directeur",
+      "requiredMessages": 80,
+      "requiredVoiceHours": 2,
+      "permissionId": 1,
+      "roleId": "1400266134749577359",
+      "isOrCondition": true
+    },
+    
+  
+    {
+      "id": 4,
+      "name": "🏮・Assistant",
+      "requiredMessages": 130,
+      "requiredVoiceHours": 3,
+      "permissionId": 2,
+      "roleId": "1400266123848450109",
+      "isOrCondition": true
+    },
+    {
+      "id": 5,
+      "name": "🍂・Surveillant",
+      "requiredMessages": 180,
+      "requiredVoiceHours": 4,
+      "permissionId": 2,
+      "roleId": "1400266120279363776",
+      "isOrCondition": true
+    },
+    {
+      "id": 6,
+      "name": "🎓・Responsable",
+      "requiredMessages": 240,
+      "requiredVoiceHours": 5,
+      "permissionId": 2,
+      "roleId": "1400266116621664507",
+      "isOrCondition": true
+    },
+    
+    
+    {
+      "id": 7,
+      "name": "🌸・Conseiller",
+      "requiredMessages": 300,
+      "requiredVoiceHours": 6,
+      "permissionId": 3,
+      "roleId": "1400266099874074675",
+      "isOrCondition": true
+    },
+    {
+      "id": 8,
+      "name": "🪐・Co-Fondateur",
+      "requiredMessages": 400,
+      "requiredVoiceHours": 7,
+      "permissionId": 3,
+      "roleId": "1400266096375889990",
+      "isOrCondition": true
+    },
+    {
+      "id": 9,
+      "name": "🌷・Maître",
+      "requiredMessages": 500,
+      "requiredVoiceHours": 8,
+      "permissionId": 3,
+      "roleId": "1400266092492095511",
+      "isOrCondition": true
+    },
+    
+   
+    {
+      "id": 10,
+      "name": "🎋・Pillier",
+      "requiredMessages": 0,
+      "requiredVoiceHours": 10,
+      "permissionId": 4,
+      "roleId": "1400266081419137186",
+      "isOrCondition": false
+    },
+    {
+      "id": 11,
+      "name": "🌿・Propriétaire",
+      "requiredMessages": 0,
+      "requiredVoiceHours": 12,
+      "permissionId": 4,
+      "roleId": "1400266078185066688",
+      "isOrCondition": false
+    },
+    {
+      "id": 12,
+      "name": "🌴・Magistrat",
+      "requiredMessages": 0,
+      "requiredVoiceHours": 15,
+      "permissionId": 4,
+      "roleId": "1400266074662109254",
+      "isOrCondition": false
+    },
+    
+   
+    {
+      "id": 13,
+      "name": "⭐・Titulaire",
+      "requiredMessages": 0,
+      "requiredVoiceHours": 20,
+      "permissionId": 5,
+      "roleId": "1400266063068794892",
+      "isOrCondition": false
+    },
+    {
+      "id": 14,
+      "name": "🪖・Dirigeant",
+      "requiredMessages": 0,
+      "requiredVoiceHours": 25,
+      "permissionId": 5,
+      "roleId": "1400266059549769932",
+      "isOrCondition": false
+    },
+    {
+      "id": 15,
+      "name": "⌚️・Sommet",
+      "requiredMessages": 0,
+      "requiredVoiceHours": 30,
+      "permissionId": 5,
+      "roleId": "1400266055552598238",
+      "isOrCondition": false
+    }
+  ]
+}
+
