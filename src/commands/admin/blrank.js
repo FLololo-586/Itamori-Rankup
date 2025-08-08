@@ -1,7 +1,6 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder } = require('discord.js');
 const { dbManager } = require('../../../database');
 const logger = require('../../utils/logger');
-
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('blacklist')
@@ -23,20 +22,16 @@ module.exports = {
             option.setName('reason')
                 .setDescription('Reason (required when adding)')
                 .setRequired(false)),
-
     async execute(interaction) {
         const action = interaction.options.getString('action');
         const memberOption = interaction.options.getMember('member');
-        
         if (!memberOption) {
             return interaction.editReply({ 
                 content: '❌ Membre introuvable.'
             });
         }
-        
         const targetUser = memberOption.user;
         const reason = interaction.options.getString('reason') || 'Aucune raison fournie';
-
         try {
             if (action === 'add') {
                 await this.handleAdd(interaction, targetUser, reason);
@@ -51,45 +46,33 @@ module.exports = {
             });
         }
     },
-
     async handleAdd(interaction, targetUser, reason) {
         try {
-            // Vérifier si l'utilisateur est déjà blacklisté
             const existing = await dbManager.getBlacklistedUser(targetUser.id);
-            
             if (existing) {
                 return interaction.editReply({
                     content: `❌ <@${targetUser.id}> est déjà dans la blacklist.`
                 });
             }
-
-            // Ensure user exists in the database and get their record
             let user = await dbManager.getUser(targetUser.id);
             if (!user) {
-                // Create user record if it doesn't exist
                 await dbManager.createUser(
-                    targetUser.id, // userId
-                    Math.floor(Date.now() / 1000) // joinDate
+                    targetUser.id, 
+                    Math.floor(Date.now() / 1000) 
                 );
-                // Verify user was created
                 user = await dbManager.getUser(targetUser.id);
                 if (!user) {
                     throw new Error('Failed to create user record');
                 }
             }
-
-            // Add to blacklist
             await dbManager.addToBlacklist(
                 targetUser.id,
                 interaction.user.id,
                 reason
             );
-
-            // Log to mod-log channel
             const modLogChannel = interaction.guild.channels.cache.find(
                 channel => channel.name === 'mod-log' || channel.name === 'logs'
             );
-
             if (modLogChannel) {
                 try {
                     const embed = new EmbedBuilder()
@@ -101,13 +84,11 @@ module.exports = {
                             { name: 'Modérateur', value: `${interaction.user.tag} (${interaction.user.id})` }
                         )
                         .setTimestamp();
-
                     await modLogChannel.send({ embeds: [embed] });
                 } catch (logError) {
                     logger.error('Failed to send mod-log:', logError);
                 }
             }
-
             await interaction.editReply({ 
                 content: `✅ ${targetUser.tag} a été ajouté(e) à la blacklist du classement.`
             });
@@ -119,7 +100,6 @@ module.exports = {
             });
         }
     },
-
     async handleRemove(interaction, targetUser) {
         try {
             const isBlacklisted = await dbManager.isBlacklisted(targetUser.id);
@@ -128,19 +108,13 @@ module.exports = {
                     content: `❌ ${targetUser.tag} n'est pas actuellement dans la blacklist.`
                 });
             }
-
-            // Remove from blacklist
             const result = await dbManager.removeFromBlacklist(targetUser.id);
-
             if (result.changes === 0) {
                 throw new Error('No changes made to blacklist');
             }
-
-            // Log to mod-log channel
             const modLogChannel = interaction.guild.channels.cache.find(
                 channel => channel.name === 'mod-log' || channel.name === 'logs'
             );
-
             if (modLogChannel) {
                 try {
                     const embed = new EmbedBuilder()
@@ -151,13 +125,11 @@ module.exports = {
                             { name: 'Modérateur', value: `${interaction.user.tag} (${interaction.user.id})` }
                         )
                         .setTimestamp();
-
                     await modLogChannel.send({ embeds: [embed] });
                 } catch (logError) {
                     logger.error('Failed to send mod-log:', logError);
                 }
             }
-
             await interaction.editReply({ 
                 content: `✅ ${targetUser.tag} a été retiré(e) de la blacklist du classement.`
             });
@@ -169,23 +141,19 @@ module.exports = {
             });
         }
     },
-
     async handleList(interaction) {
         try {
             const blacklist = await dbManager.getBlacklist();
-            
             if (!blacklist || blacklist.length === 0) {
                 return interaction.reply({
                     content: 'No users are currently blacklisted from ranking up.',
                     ephemeral: true
                 });
             }
-
             const embed = new EmbedBuilder()
                 .setTitle('Rank Blacklist')
                 .setColor(0x3498DB)
                 .setDescription('Users who are blacklisted from ranking up:');
-
             const fields = blacklist.map(entry => ({
                 name: `User ID: ${entry.userId}`,
                 value: `**Reason:** ${entry.reason || 'No reason provided'}\n` +
@@ -193,14 +161,10 @@ module.exports = {
                        `**Date:** <t:${Math.floor(entry.createdAt / 1000)}:f>`,
                 inline: false
             }));
-
-            // Split into chunks of 25 fields (Discord limit)
             const chunks = [];
             for (let i = 0; i < fields.length; i += 25) {
                 chunks.push(fields.slice(i, i + 25));
             }
-
-            // Send first chunk
             await interaction.reply({ 
                 embeds: [
                     new EmbedBuilder(embed.toJSON())
@@ -208,8 +172,6 @@ module.exports = {
                 ],
                 ephemeral: true 
             });
-
-            // Send remaining chunks if any
             for (let i = 1; i < chunks.length; i++) {
                 await interaction.followUp({ 
                     embeds: [

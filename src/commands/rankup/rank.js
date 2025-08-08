@@ -1,6 +1,5 @@
 const { EmbedBuilder, SlashCommandBuilder } = require('discord.js');
 const logger = require('../../utils/logger');
-
 /**
  * Format time in minutes to a human-readable string
  * @param {number} minutes - Total minutes
@@ -8,20 +7,16 @@ const logger = require('../../utils/logger');
  */
 function formatTime(minutes) {
     if (!minutes || isNaN(minutes)) return '0m';
-    
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
     const remainingHours = hours % 24;
     const remainingMinutes = Math.round(minutes % 60);
-    
     const parts = [];
     if (days > 0) parts.push(`${days}d`);
     if (remainingHours > 0) parts.push(`${remainingHours}h`);
     if (remainingMinutes > 0 || parts.length === 0) parts.push(`${remainingMinutes}m`);
-    
     return parts.join(' ');
 }
-
 /**
  * Find user's current rank based on their roles
  * @param {GuildMember} member - The guild member
@@ -29,18 +24,12 @@ function formatTime(minutes) {
  * @returns {Object} The highest rank the user has
  */
 function findUserRank(member, ranks) {
-    // Sort ranks by ID in descending order to get highest rank first
     const sortedRanks = [...ranks].sort((a, b) => b.id - a.id);
-    
-    // Find the highest rank the user has
     const userRank = sortedRanks.find(rank => 
         member.roles.cache.has(rank.roleId)
     );
-    
-    // Return the highest rank found or the first rank as default
     return userRank || (ranks.length > 0 ? ranks[0] : null);
 }
-
 /**
  * Calculate progress towards the next rank
  * @param {Object} user - User data from database
@@ -60,10 +49,8 @@ function calculateRankProgress(user, ranks, member) {
             remainingVoiceHours: 0
         };
     }
-    
     const currentRankIndex = ranks.findIndex(r => r.id === currentRank.id);
     const nextRank = currentRankIndex < ranks.length - 1 ? ranks[currentRankIndex + 1] : null;
-    
     if (!nextRank) {
         return {
             hasNextRank: false,
@@ -74,22 +61,15 @@ function calculateRankProgress(user, ranks, member) {
             remainingVoiceHours: 0
         };
     }
-    
-    // Calculate progress based on both message and voice requirements
     const messagesRequired = nextRank.requiredMessages || 0;
     const voiceHoursRequired = nextRank.requiredVoiceHours || 0;
-    
     const messagesProgress = messagesRequired > 0 
         ? Math.min(100, Math.floor(((user.totalMessages || 0) / messagesRequired) * 100))
         : 100;
-        
     const voiceProgress = voiceHoursRequired > 0 
         ? Math.min(100, Math.floor(((user.totalVoiceMinutes || 0) / 60 / voiceHoursRequired) * 100))
         : 100;
-    
-    // Overall progress is the minimum of both requirements
     const progress = Math.min(messagesProgress, voiceProgress);
-    
     return {
         hasNextRank: true,
         currentRank,
@@ -99,7 +79,6 @@ function calculateRankProgress(user, ranks, member) {
         remainingVoiceHours: Math.max(0, voiceHoursRequired - (user.totalVoiceMinutes / 60))
     };
 }
-
 const data = new SlashCommandBuilder()
     .setName('rank')
     .setDescription('Vérifiez votre rang actuel et vos statistiques')
@@ -108,32 +87,23 @@ const data = new SlashCommandBuilder()
             .setDescription('Utilisateur dont vérifier le rang (optionnel)')
             .setRequired(false)
     );
-
 /**
  * Execute the rank command
  * @param {import('discord.js').ChatInputCommandInteraction} interaction - The interaction object
  * @param {import('../../index')} client - The Discord client
  */
 async function execute(interaction, client) {
-        // Vérifier si l'interaction a déjà été traitée
         if (interaction.replied || interaction.deferred) {
             return;
         }
-        
         try {
-            // Différer la réponse immédiatement
             await interaction.deferReply({ ephemeral: true });
-            
-            // Get the target user (default to command user)
             const targetUser = interaction.options.getUser('utilisateur') || interaction.user;
             const member = interaction.guild?.members.cache.get(targetUser.id) || 
                 await interaction.guild?.members.fetch(targetUser.id).catch(() => null);
-            
             if (!member) {
                 return interaction.editReply('Impossible de récupérer les informations du membre.');
             }
-            
-            // Get user stats from database
             const user = await client.db.getUserStats(targetUser.id);
             if (!user) {
                 return interaction.editReply({
@@ -143,29 +113,20 @@ async function execute(interaction, client) {
                     ephemeral: true
                 });
             }
-            
-            // Calculate rank progress based on user's roles
             const rankProgress = calculateRankProgress(user, client.config.ranks, member);
             const { currentRank, nextRank, progress } = rankProgress;
-            
             if (!currentRank) {
                 return interaction.editReply({
                     content: 'Aucun rang trouvé pour cet utilisateur.',
                     ephemeral: true
                 });
             }
-            
-            // Fetch current role name from Discord using role ID
             const currentRankRole = interaction.guild.roles.cache.get(currentRank.roleId);
             const currentRankName = currentRankRole ? currentRankRole.name : currentRank.name;
-            
-            // Create progress bar
             const progressBarLength = 20;
             const filledSquares = Math.round((progress / 100) * progressBarLength);
             const emptySquares = progressBarLength - filledSquares;
             const progressBar = '▰'.repeat(filledSquares) + '▱'.repeat(emptySquares);
-            
-            // Create embed
             const embed = new EmbedBuilder()
                 .setColor(member.displayHexColor || '#0099ff')
                 .setAuthor({
@@ -200,16 +161,11 @@ async function execute(interaction, client) {
                     iconURL: interaction.user.displayAvatarURL() 
                 })
                 .setTimestamp();
-            
-            // Add rank progress if there's a next rank
             if (rankProgress.hasNextRank) {
                 const messagesRequired = nextRank.requiredMessages || 0;
                 const voiceHoursRequired = nextRank.requiredVoiceHours || 0;
-                
-                // Fetch role name from Discord using role ID
                 const nextRankRole = interaction.guild.roles.cache.get(nextRank.roleId);
                 const nextRankName = nextRankRole ? nextRankRole.name : nextRank.name;
-                
                 embed.addFields({
                     name: `Progression vers ${nextRankName}`,
                     value: `${progressBar} ${progress}%\n` +
@@ -224,13 +180,9 @@ async function execute(interaction, client) {
                     inline: false
                 });
             }
-            
-            // Send the embed
             await interaction.editReply({ embeds: [embed] });
-            
         } catch (error) {
             logger.error('Error in rank command:', error);
-            
             if (!interaction.replied && !interaction.deferred) {
                 await interaction.reply({
                     content: 'Une erreur s\'est produite lors du traitement de votre demande.',
@@ -244,10 +196,7 @@ async function execute(interaction, client) {
             }
         }
 }
-
-// Command aliases (for legacy prefix commands)
 const aliases = ['level', 'stats'];
-
 module.exports = {
     data,
     execute,
