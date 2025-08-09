@@ -79,6 +79,13 @@ class DatabaseManager {
                             updatedAt INTEGER,
                             FOREIGN KEY (userId) REFERENCES users(userId) ON DELETE CASCADE
                         )`,
+                        `CREATE TABLE IF NOT EXISTS reset_config (
+                            id INTEGER PRIMARY KEY CHECK (id = 1),
+                            nextResetDate INTEGER,
+                            intervalDays INTEGER DEFAULT 14,
+                            createdAt INTEGER DEFAULT (strftime('%s', 'now')),
+                            updatedAt INTEGER DEFAULT (strftime('%s', 'now'))
+                        )`,
                         'CREATE INDEX IF NOT EXISTS idx_message_history_user_id ON message_history(userId)',
                         'CREATE INDEX IF NOT EXISTS idx_voice_sessions_user_id ON voice_sessions(userId)',
                         'CREATE INDEX IF NOT EXISTS idx_blacklist_user_id ON blacklist(userId)'
@@ -754,6 +761,75 @@ class DatabaseManager {
                         return reject(err);
                     }
                     logger.debug(`Updated lastRankUp for user ${userId}`);
+                    resolve(true);
+                }
+            );
+        });
+    }
+
+    // Reset configuration methods
+    /**
+     * Get the current reset configuration
+     * @returns {Promise<Object|null>} The reset configuration or null if not set
+     */
+    getResetConfig() {
+        return new Promise((resolve, reject) => {
+            this.db.get(
+                'SELECT * FROM reset_config WHERE id = 1',
+                (err, row) => {
+                    if (err) {
+                        logger.error('Error getting reset config:', err);
+                        return reject(err);
+                    }
+                    resolve(row);
+                }
+            );
+        });
+    }
+
+    /**
+     * Set the next reset date
+     * @param {number} nextResetTimestamp - Unix timestamp of the next reset
+     * @returns {Promise<boolean>} True if successful
+     */
+    setNextResetDate(nextResetTimestamp) {
+        return new Promise((resolve, reject) => {
+            const now = Math.floor(Date.now() / 1000);
+            this.db.run(
+                `INSERT OR REPLACE INTO reset_config (id, nextResetDate, intervalDays, updatedAt)
+                 VALUES (1, ?, 14, ?)`,
+                [nextResetTimestamp, now],
+                function(err) {
+                    if (err) {
+                        logger.error('Error setting next reset date:', err);
+                        return reject(err);
+                    }
+                    logger.info(`Next reset date set to: ${new Date(nextResetTimestamp * 1000).toISOString()}`);
+                    resolve(true);
+                }
+            );
+        });
+    }
+
+    /**
+     * Update the next reset date (for scheduling the next reset after one completes)
+     * @param {number} nextResetTimestamp - Unix timestamp of the next reset
+     * @returns {Promise<boolean>} True if successful
+     */
+    updateNextResetDate(nextResetTimestamp) {
+        return new Promise((resolve, reject) => {
+            const now = Math.floor(Date.now() / 1000);
+            this.db.run(
+                `UPDATE reset_config 
+                 SET nextResetDate = ?, updatedAt = ?
+                 WHERE id = 1`,
+                [nextResetTimestamp, now],
+                function(err) {
+                    if (err) {
+                        logger.error('Error updating next reset date:', err);
+                        return reject(err);
+                    }
+                    logger.info(`Next reset date updated to: ${new Date(nextResetTimestamp * 1000).toISOString()}`);
                     resolve(true);
                 }
             );

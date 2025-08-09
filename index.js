@@ -6,6 +6,7 @@ const config = require('./config.json');
 const { DatabaseManager } = require('./database');
 const logger = require('./src/utils/logger');
 const Scheduler = require('./src/utils/scheduler');
+const ResetPrompt = require('./src/utils/resetPrompt');
 
 // Load configuration
 if (!config.token) {
@@ -214,12 +215,23 @@ async function main() {
             client.loadCommands()
         ]);
         
+        // Configure reset system before starting the bot
+        logger.info('Configuring reset system...');
+        const resetPrompt = new ResetPrompt();
+        const resetConfigured = await resetPrompt.setupReset();
+        resetPrompt.cleanup();
+        
+        if (!resetConfigured) {
+            logger.error('Failed to configure reset system. Exiting...');
+            process.exit(1);
+        }
+        
         // Login to Discord
         logger.info('Logging in to Discord...');
         await client.login(config.token);
         
         // Start scheduled tasks
-        client.scheduler.scheduleBiWeeklyReset();
+        await client.scheduler.scheduleBiWeeklyReset();
         logger.info('Scheduled tasks initialized');
         
         // Handle graceful shutdown
