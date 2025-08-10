@@ -73,14 +73,14 @@ module.exports = {
                 if (currentValue < amount) {
                     return await interaction.editReply(`Ce membre n'a que ${currentValue.toLocaleString()} messages. Impossible de retirer ${amount.toLocaleString()}.`);
                 }
-                await client.db.removeMessages(targetUser.id, amount);
+                await client.db.addMessages(targetUser.id, -amount);
                 newValue = currentValue - amount;
             } else if (statType === 'voicetime') {
                 currentValue = user.totalVoiceMinutes || 0;
                 if (currentValue < amount) {
                     return await interaction.editReply(`Ce membre n'a que ${formatTime(currentValue)} de temps vocal. Impossible de retirer ${amount} minutes.`);
                 }
-                await client.db.removeVoiceTime(targetUser.id, amount);
+                await client.db.addVoiceTime(targetUser.id, -amount);
                 newValue = currentValue - amount;
             }
 
